@@ -23,6 +23,7 @@ class Webservices {
                 let decodedData = try? JSONDecoder().decode(Movie.self, from: data)
                 if let decodedData = decodedData {
                     completion(decodedData)
+                    
                 }
             }
             

@@ -28,19 +28,17 @@ class HomePageViewController: UIViewController , UITableViewDelegate, UITableVie
         
          
         
-        for i in 100...200 {
+        
             let url = URL(string:"https://api.themoviedb.org/3/movie/550?api_key=50bbd6f582cd05dd01b18c5309bc9ae5")
          
-            Webservices().getFilms(url: url!) { Movies in
-                if let Movie = Movies {
-                    self.titleArray.append(Movie.originalTitle ?? "boş")
-                    self.detailArray.append(Movie.overview ?? "boş")
-                    self.posterArray.append(Movie.posterPath ?? "boş")
-                }
+        Webservices().getFilms(url: url!) { (film) in
+            if let film = film {
+                print(film)
             }
-         
         }
-        print(self.titleArray)
+         
+        
+      
         
     }
     
