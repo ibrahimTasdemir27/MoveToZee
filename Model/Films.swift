@@ -6,27 +6,30 @@
 import Foundation
 
 // MARK: - Movie
-struct Movie: Codable {
-    let adult: Bool?
-    let backdropPath: String?
-    let belongsToCollection: JSONNull?
-    let budget: Int?
-    let genres: [Genre]?
-    let homepage: String?
-    let id: Int?
-    let imdbID, originalLanguage, originalTitle, overview: String?
-    let popularity: Double?
-    let posterPath: String?
-    let productionCompanies: [ProductionCompany]?
-    let productionCountries: [ProductionCountry]?
-    let releaseDate: String?
-    let revenue, runtime: Int?
-    let spokenLanguages: [SpokenLanguage]?
-    let status, tagline, title: String?
-    let video: Bool?
-    let voteAverage: Double?
-    let voteCount: Int?
-
+struct Movie: Decodable {
+//    let adult: Bool?
+//    let backdropPath: String?
+//    let belongsToCollection: JSONNull?
+//    let budget: Int?
+//    let genres: [Genre]?
+//    let homepage: String?
+//    let id: Int?
+//    let imdbID, originalLanguage, originalTitle, overview: String?
+//    let popularity: Double?
+//    let posterPath: String?
+//    let productionCompanies: [ProductionCompany]?
+//    let productionCountries: [ProductionCountry]?
+//    let releaseDate: String?
+//    let revenue, runtime: Int?
+//    let spokenLanguages: [SpokenLanguage]?
+//    let status, tagline, title: String?
+//    let video: Bool?
+//    let voteAverage: Double?
+//    let voteCount: Int?
+    let originalTitle : String?
+    let overview : String?
+    let posterPath : String?
+}
     enum CodingKeys: String, CodingKey {
         case adult
         case backdropPath = "backdrop_path"
@@ -46,7 +49,7 @@ struct Movie: Codable {
         case voteAverage = "vote_average"
         case voteCount = "vote_count"
     }
-}
+
 
 // MARK: - Genre
 struct Genre: Codable {

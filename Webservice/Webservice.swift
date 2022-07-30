@@ -20,7 +20,7 @@ class Webservices {
             } else if let data = data {
                 //Veri var
                 
-                let decodedData = try? JSONDecoder().decode(Movie.self, from: data)
+                let decodedData  = try? JSONDecoder().decode(Movie.self, from: data)
                 if let decodedData = decodedData {
                     completion(decodedData)
                     

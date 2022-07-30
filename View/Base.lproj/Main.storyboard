@@ -178,7 +178,7 @@
             <objects>
                 <tabBarController id="9Fk-hb-IgV" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="XyI-SN-8G1"/>
-                    <tabBar key="tabBar" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WzQ-4y-bEc">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WzQ-4y-bEc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
