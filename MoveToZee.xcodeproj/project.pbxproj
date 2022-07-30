@@ -7,15 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		086C6A21E8785593CBC50B01 /* Pods_MoveToZee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69CEA94EED30A115A66025DE /* Pods_MoveToZee.framework */; };
 		BF6151E72892F24E00DA127F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6151E62892F24E00DA127F /* AppDelegate.swift */; };
 		BF6151E92892F24E00DA127F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6151E82892F24E00DA127F /* SceneDelegate.swift */; };
 		BF6151EB2892F24E00DA127F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6151EA2892F24E00DA127F /* ViewController.swift */; };
 		BF6151EE2892F24E00DA127F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF6151EC2892F24E00DA127F /* Main.storyboard */; };
 		BF6151F02892F24F00DA127F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF6151EF2892F24F00DA127F /* Assets.xcassets */; };
 		BF6151F32892F24F00DA127F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF6151F12892F24F00DA127F /* LaunchScreen.storyboard */; };
+		BFA591B1289445EF003D2B34 /* asdsad.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA591B0289445EE003D2B34 /* asdsad.swift */; };
+		BFD264C4289301240034EF39 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFD264C3289301240034EF39 /* GoogleService-Info.plist */; };
+		BFD264CC2893B45C0034EF39 /* MyFilmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD264CB2893B45C0034EF39 /* MyFilmsViewController.swift */; };
+		BFD264CE2893B4890034EF39 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD264CD2893B4890034EF39 /* FavoriteViewController.swift */; };
+		BFD264D02893B4A80034EF39 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD264CF2893B4A80034EF39 /* HomePageViewController.swift */; };
+		BFD264D22893B4B50034EF39 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD264D12893B4B50034EF39 /* ProfileViewController.swift */; };
+		BFD264D42893BC1A0034EF39 /* CellHomePageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD264D32893BC1A0034EF39 /* CellHomePageTableViewCell.swift */; };
+		BFD264D62893BF550034EF39 /* Films.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD264D52893BF550034EF39 /* Films.swift */; };
+		BFD264D82893BFF00034EF39 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD264D72893BFF00034EF39 /* Webservice.swift */; };
+		BFD264DA2893C6B70034EF39 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD264D92893C6B70034EF39 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		69CEA94EED30A115A66025DE /* Pods_MoveToZee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoveToZee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89EB635652CCAB6D57042DBC /* Pods-MoveToZee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoveToZee.release.xcconfig"; path = "Target Support Files/Pods-MoveToZee/Pods-MoveToZee.release.xcconfig"; sourceTree = "<group>"; };
 		BF6151E32892F24E00DA127F /* MoveToZee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoveToZee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF6151E62892F24E00DA127F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF6151E82892F24E00DA127F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +37,17 @@
 		BF6151EF2892F24F00DA127F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF6151F22892F24F00DA127F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF6151F42892F24F00DA127F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFA591B0289445EE003D2B34 /* asdsad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = asdsad.swift; sourceTree = "<group>"; };
+		BFD264C3289301240034EF39 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BFD264CB2893B45C0034EF39 /* MyFilmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFilmsViewController.swift; sourceTree = "<group>"; };
+		BFD264CD2893B4890034EF39 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		BFD264CF2893B4A80034EF39 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		BFD264D12893B4B50034EF39 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		BFD264D32893BC1A0034EF39 /* CellHomePageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHomePageTableViewCell.swift; sourceTree = "<group>"; };
+		BFD264D52893BF550034EF39 /* Films.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Films.swift; sourceTree = "<group>"; };
+		BFD264D72893BFF00034EF39 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		BFD264D92893C6B70034EF39 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C6409A4BB5AC898FDA877B29 /* Pods-MoveToZee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoveToZee.debug.xcconfig"; path = "Target Support Files/Pods-MoveToZee/Pods-MoveToZee.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +55,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				086C6A21E8785593CBC50B01 /* Pods_MoveToZee.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56A68E0BBB6615B7BADF8279 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69CEA94EED30A115A66025DE /* Pods_MoveToZee.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BF6151DA2892F24E00DA127F = {
 			isa = PBXGroup;
 			children = (
+				BFD264C82893B3470034EF39 /* Webservice */,
+				BFD264C72893B33D0034EF39 /* ViewModel */,
+				BFD264C62893B3270034EF39 /* Model */,
+				BFD264C52893B2F40034EF39 /* View */,
 				BF6151E52892F24E00DA127F /* MoveToZee */,
 				BF6151E42892F24E00DA127F /* Products */,
+				ED83B2A822EDA20332213713 /* Pods */,
+				56A68E0BBB6615B7BADF8279 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +95,62 @@
 		BF6151E52892F24E00DA127F /* MoveToZee */ = {
 			isa = PBXGroup;
 			children = (
-				BF6151E62892F24E00DA127F /* AppDelegate.swift */,
-				BF6151E82892F24E00DA127F /* SceneDelegate.swift */,
-				BF6151EA2892F24E00DA127F /* ViewController.swift */,
 				BF6151EC2892F24E00DA127F /* Main.storyboard */,
 				BF6151EF2892F24F00DA127F /* Assets.xcassets */,
 				BF6151F12892F24F00DA127F /* LaunchScreen.storyboard */,
 				BF6151F42892F24F00DA127F /* Info.plist */,
+				BFD264C3289301240034EF39 /* GoogleService-Info.plist */,
 			);
 			path = MoveToZee;
+			sourceTree = "<group>";
+		};
+		BFD264C52893B2F40034EF39 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF6151E62892F24E00DA127F /* AppDelegate.swift */,
+				BF6151E82892F24E00DA127F /* SceneDelegate.swift */,
+				BF6151EA2892F24E00DA127F /* ViewController.swift */,
+				BFD264CF2893B4A80034EF39 /* HomePageViewController.swift */,
+				BFD264CB2893B45C0034EF39 /* MyFilmsViewController.swift */,
+				BFD264CD2893B4890034EF39 /* FavoriteViewController.swift */,
+				BFD264D12893B4B50034EF39 /* ProfileViewController.swift */,
+				BFD264D32893BC1A0034EF39 /* CellHomePageTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BFD264C62893B3270034EF39 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BFD264D52893BF550034EF39 /* Films.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BFD264C72893B33D0034EF39 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BFD264D92893C6B70034EF39 /* Constants.swift */,
+				BFA591B0289445EE003D2B34 /* asdsad.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BFD264C82893B3470034EF39 /* Webservice */ = {
+			isa = PBXGroup;
+			children = (
+				BFD264D72893BFF00034EF39 /* Webservice.swift */,
+			);
+			path = Webservice;
+			sourceTree = "<group>";
+		};
+		ED83B2A822EDA20332213713 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C6409A4BB5AC898FDA877B29 /* Pods-MoveToZee.debug.xcconfig */,
+				89EB635652CCAB6D57042DBC /* Pods-MoveToZee.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +160,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF6151F72892F24F00DA127F /* Build configuration list for PBXNativeTarget "MoveToZee" */;
 			buildPhases = (
+				B22CACEE92EA8ACF76398BEB /* [CP] Check Pods Manifest.lock */,
 				BF6151DF2892F24E00DA127F /* Sources */,
 				BF6151E02892F24E00DA127F /* Frameworks */,
 				BF6151E12892F24E00DA127F /* Resources */,
+				545C046D96D0E93D70744DA0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF6151F32892F24F00DA127F /* LaunchScreen.storyboard in Resources */,
+				BFD264C4289301240034EF39 /* GoogleService-Info.plist in Resources */,
 				BF6151F02892F24F00DA127F /* Assets.xcassets in Resources */,
 				BF6151EE2892F24E00DA127F /* Main.storyboard in Resources */,
 			);
@@ -133,13 +222,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		545C046D96D0E93D70744DA0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoveToZee/Pods-MoveToZee-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoveToZee/Pods-MoveToZee-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MoveToZee/Pods-MoveToZee-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B22CACEE92EA8ACF76398BEB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoveToZee-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BF6151DF2892F24E00DA127F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFD264CC2893B45C0034EF39 /* MyFilmsViewController.swift in Sources */,
+				BFD264DA2893C6B70034EF39 /* Constants.swift in Sources */,
 				BF6151EB2892F24E00DA127F /* ViewController.swift in Sources */,
+				BFD264D02893B4A80034EF39 /* HomePageViewController.swift in Sources */,
+				BFD264D42893BC1A0034EF39 /* CellHomePageTableViewCell.swift in Sources */,
+				BFD264D62893BF550034EF39 /* Films.swift in Sources */,
 				BF6151E72892F24E00DA127F /* AppDelegate.swift in Sources */,
+				BFA591B1289445EF003D2B34 /* asdsad.swift in Sources */,
+				BFD264D22893B4B50034EF39 /* ProfileViewController.swift in Sources */,
+				BFD264CE2893B4890034EF39 /* FavoriteViewController.swift in Sources */,
+				BFD264D82893BFF00034EF39 /* Webservice.swift in Sources */,
 				BF6151E92892F24E00DA127F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +422,7 @@
 		};
 		BF6151F82892F24F00DA127F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6409A4BB5AC898FDA877B29 /* Pods-MoveToZee.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +451,7 @@
 		};
 		BF6151F92892F24F00DA127F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89EB635652CCAB6D57042DBC /* Pods-MoveToZee.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
