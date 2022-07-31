@@ -10,7 +10,7 @@ import Foundation
 
 struct FilmsTableViewModel {
     
-    let newList : [Movie]
+    let newList : [MovieResultModel]
     func numberOfRowsInsection() -> Int {
         return self.newList.count
     }
@@ -21,15 +21,15 @@ struct FilmsTableViewModel {
 }
 
 struct FilmsViewModel {
-    let films : Movie
+    let films : MovieResultModel
     
     var originalTitle : String {
-        return self.films.originalTitle!
+        return self.films.originalTitle
     }
     var overview : String {
-        return self.films.overview!
+        return self.films.overview
     }
     var posterPath : String {
-        return self.films.posterPath!
+        return (self.films.posterPath)!
     }
 }

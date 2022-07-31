@@ -15,8 +15,6 @@
 		BF6151F02892F24F00DA127F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF6151EF2892F24F00DA127F /* Assets.xcassets */; };
 		BF6151F32892F24F00DA127F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF6151F12892F24F00DA127F /* LaunchScreen.storyboard */; };
 		BFA591FB28951AAF003D2B34 /* FilmsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA591FA28951AAF003D2B34 /* FilmsTableViewModel.swift */; };
-		BFA591FF28954BB1003D2B34 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA591FE28954BB1003D2B34 /* NetworkManager.swift */; };
-		BFA5920328955521003D2B34 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA5920228955521003D2B34 /* Currency.swift */; };
 		BFD264C4289301240034EF39 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFD264C3289301240034EF39 /* GoogleService-Info.plist */; };
 		BFD264CC2893B45C0034EF39 /* MyFilmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD264CB2893B45C0034EF39 /* MyFilmsViewController.swift */; };
 		BFD264CE2893B4890034EF39 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD264CD2893B4890034EF39 /* FavoriteViewController.swift */; };
@@ -25,7 +23,6 @@
 		BFD264D42893BC1A0034EF39 /* CellHomePageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD264D32893BC1A0034EF39 /* CellHomePageTableViewCell.swift */; };
 		BFD264D62893BF550034EF39 /* Films.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD264D52893BF550034EF39 /* Films.swift */; };
 		BFD264D82893BFF00034EF39 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD264D72893BFF00034EF39 /* Webservice.swift */; };
-		BFD264DA2893C6B70034EF39 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD264D92893C6B70034EF39 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,8 +37,6 @@
 		BF6151F22892F24F00DA127F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF6151F42892F24F00DA127F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFA591FA28951AAF003D2B34 /* FilmsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsTableViewModel.swift; sourceTree = "<group>"; };
-		BFA591FE28954BB1003D2B34 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		BFA5920228955521003D2B34 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		BFD264C3289301240034EF39 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BFD264CB2893B45C0034EF39 /* MyFilmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFilmsViewController.swift; sourceTree = "<group>"; };
 		BFD264CD2893B4890034EF39 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +45,6 @@
 		BFD264D32893BC1A0034EF39 /* CellHomePageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHomePageTableViewCell.swift; sourceTree = "<group>"; };
 		BFD264D52893BF550034EF39 /* Films.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Films.swift; sourceTree = "<group>"; };
 		BFD264D72893BFF00034EF39 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
-		BFD264D92893C6B70034EF39 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C6409A4BB5AC898FDA877B29 /* Pods-MoveToZee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoveToZee.debug.xcconfig"; path = "Target Support Files/Pods-MoveToZee/Pods-MoveToZee.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				BFD264D52893BF550034EF39 /* Films.swift */,
-				BFA5920228955521003D2B34 /* Currency.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -135,9 +128,7 @@
 		BFD264C72893B33D0034EF39 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				BFD264D92893C6B70034EF39 /* Constants.swift */,
 				BFA591FA28951AAF003D2B34 /* FilmsTableViewModel.swift */,
-				BFA591FE28954BB1003D2B34 /* NetworkManager.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -276,9 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFD264CC2893B45C0034EF39 /* MyFilmsViewController.swift in Sources */,
-				BFD264DA2893C6B70034EF39 /* Constants.swift in Sources */,
 				BFA591FB28951AAF003D2B34 /* FilmsTableViewModel.swift in Sources */,
-				BFA591FF28954BB1003D2B34 /* NetworkManager.swift in Sources */,
 				BF6151EB2892F24E00DA127F /* ViewController.swift in Sources */,
 				BFD264D02893B4A80034EF39 /* HomePageViewController.swift in Sources */,
 				BFD264D42893BC1A0034EF39 /* CellHomePageTableViewCell.swift in Sources */,
@@ -287,7 +276,6 @@
 				BFD264D22893B4B50034EF39 /* ProfileViewController.swift in Sources */,
 				BFD264CE2893B4890034EF39 /* FavoriteViewController.swift in Sources */,
 				BFD264D82893BFF00034EF39 /* Webservice.swift in Sources */,
-				BFA5920328955521003D2B34 /* Currency.swift in Sources */,
 				BF6151E92892F24E00DA127F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
