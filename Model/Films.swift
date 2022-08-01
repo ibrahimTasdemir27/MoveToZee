@@ -17,7 +17,7 @@ struct MovieResultModel: Codable {
     let overview: String
     let posterPath: String?
    
-
+    
     enum CodingKeys: String, CodingKey {
        
         case originalTitle = "original_title"
