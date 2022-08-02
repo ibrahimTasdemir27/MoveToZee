@@ -8,6 +8,7 @@
 import UIKit
 import Kingfisher
 import SwiftUI
+import CoreData
 
 class CellHomePageTableViewCell: UITableViewCell {
 
@@ -17,29 +18,49 @@ class CellHomePageTableViewCell: UITableViewCell {
     @IBOutlet weak var detailPosterHome: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-  
+        self.accessoryType = .disclosureIndicator
     }
-    @IBAction func favoriteButton(_ sender: Any) {
-        favoriteButtonDesign.layer.cornerRadius = 230
-        favoriteButtonDesign.tintColor = .white
+    @IBAction func favoriteButton(_ index: Int) {
+        var favButtonColor = favoriteButtonDesign.tintColor!
+        
+        switch favButtonColor {
+        case UIColor.systemRed :
+            favoriteButtonDesign.tintColor = .systemGray
+        case UIColor.systemGray :
+            favoriteButtonDesign.tintColor = .systemRed
+        default:break
+        }
+        
+        //CoreData
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let movieCoreModel = NSEntityDescription.insertNewObject(forEntityName: "MovieDatabase", into: context)
+        let imageToBinary = filmPosterHome.image?.jpegData(compressionQuality: 0.5)
+        
+        movieCoreModel.setValue(titlePosterHome.text, forKey: "titleMovie")
+        movieCoreModel.setValue(detailPosterHome.text, forKey: "detailMovie")
+        movieCoreModel.setValue(imageToBinary, forKey: "imageMovie")
+        movieCoreModel.setValue(UUID(), forKey: "id")
+        do{
+            try context.save()
+            print("kayıt edildi")
+        }catch{
+            print("hata var")
+        }
+       //
         
     }
    
 
     func setImage(movie: MovieResultModel) {
-        self.titlePosterHome.textColor = .white
-        self.titlePosterHome.backgroundColor = .black
         
-        self.detailPosterHome.textColor = .white
-        self.detailPosterHome.backgroundColor = .black
         
-        self.filmPosterHome.layer.borderWidth = 1
-        self.filmPosterHome.layer.borderColor = UIColor.white.cgColor
         
         self.titlePosterHome.text = movie.originalTitle
         self.detailPosterHome.text = movie.overview
         
+        filmPosterHome.contentMode = .scaleToFill
+        filmPosterHome.layer.cornerRadius = 10
         
         let processor = DownsamplingImageProcessor(size: self.filmPosterHome.bounds.size)
 
@@ -56,6 +77,17 @@ class CellHomePageTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    /*
+     Favori butonuna tıklanacak +
+     Favori butonunun rengi değişecek +
+     Favori butonuna tıklandığı CoreDataya bildirilecek ve kaydedilecek +
+     Favoriye alınan film favori sekmesinde sırasıyla gösterilecek
+     Favoriden kaldırılabilecek
+     
+     Core data attirubutes
+     Film adı + Film Detayları + Film resmi
+     */
+
     
     
 }
