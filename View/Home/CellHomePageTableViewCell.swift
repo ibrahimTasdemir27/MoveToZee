@@ -11,7 +11,13 @@ import SwiftUI
 import CoreData
 
 class CellHomePageTableViewCell: UITableViewCell {
-
+    
+    let starButton = UIButton()
+    var idMovieArray = [Int]()
+    static var selectedMovie: MovieResultModel?
+    private var filmsTableViewModel = FilmsTableViewModel.self
+    
+    @IBOutlet weak var starButtonDesign: UIButton!
     @IBOutlet weak var favoriteButtonDesign: UIButton!
     @IBOutlet weak var filmPosterHome: UIImageView!
     @IBOutlet weak var titlePosterHome: UILabel!
@@ -19,48 +25,33 @@ class CellHomePageTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.accessoryType = .disclosureIndicator
+        //FireStoreManager().saveLibrary(title: "Deneme 1")
+        //FireStoreManager().getLibrary()
+        
+        
+        
+        //Layout
+        favoriteButtonDesign.frame = CGRect(x: 350 , y: 125, width: 40, height: 40)
+        titlePosterHome.frame = CGRect(x: 131, y: 11, width: 215, height: 34)
+        detailPosterHome.frame = CGRect(x: 131, y: 45, width: 215, height: 99)
+        favoriteButtonDesign.tintColor = .darkGray
+        
+        starButtonDesign.tintColor = .systemYellow
+        starButtonDesign.layer.borderWidth = 1.3
+        starButtonDesign.layer.borderColor = UIColor.darkGray.cgColor
+        starButtonDesign.layer.cornerRadius = 22
+        starButtonDesign.frame = CGRect(x: 344, y: 23, width: 40, height: 40)
     }
-    @IBAction func favoriteButton(_ index: Int) {
-        var favButtonColor = favoriteButtonDesign.tintColor!
-        
-        switch favButtonColor {
-        case UIColor.systemRed :
-            favoriteButtonDesign.tintColor = .systemGray
-        case UIColor.systemGray :
-            favoriteButtonDesign.tintColor = .systemRed
-        default:break
-        }
-        
-        //CoreData
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        let movieCoreModel = NSEntityDescription.insertNewObject(forEntityName: "MovieDatabase", into: context)
-        let imageToBinary = filmPosterHome.image?.jpegData(compressionQuality: 0.5)
-        
-        movieCoreModel.setValue(titlePosterHome.text, forKey: "titleMovie")
-        movieCoreModel.setValue(detailPosterHome.text, forKey: "detailMovie")
-        movieCoreModel.setValue(imageToBinary, forKey: "imageMovie")
-        movieCoreModel.setValue(UUID(), forKey: "id")
-        do{
-            try context.save()
-            print("kayıt edildi")
-        }catch{
-            print("hata var")
-        }
-       //
-        
-    }
-   
+
 
     func setImage(movie: MovieResultModel) {
-        
-        
-        
         self.titlePosterHome.text = movie.originalTitle
         self.detailPosterHome.text = movie.overview
         
         filmPosterHome.contentMode = .scaleToFill
         filmPosterHome.layer.cornerRadius = 10
+    
+        
         
         let processor = DownsamplingImageProcessor(size: self.filmPosterHome.bounds.size)
 
@@ -76,6 +67,21 @@ class CellHomePageTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
     
     /*
      Favori butonuna tıklanacak +
@@ -90,4 +96,5 @@ class CellHomePageTableViewCell: UITableViewCell {
 
     
     
-}
+
+

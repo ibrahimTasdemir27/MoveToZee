@@ -14,7 +14,8 @@
 import UIKit
 import CoreData
 import FirebaseCore
-
+import FirebaseFirestore
+import FirebaseStorage
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -25,11 +26,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         
-        
         FirebaseApp.configure()
+        let db = Firestore.firestore()
         return true
     }
+  
     
+  
+
+//    func deleteAllData(_ entity: String ){
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        let managedContext = appDelegate.persistentContainer.viewContext
+//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
+//        fetchRequest.returnsObjectsAsFaults = false
+//
+//        do
+//        {
+//            let results = try managedContext.fetch(fetchRequest)
+//            for managedObject in results as! [NSManagedObject]
+//            {
+//                
+//                managedContext.delete(managedObject)
+//                print("silindi")
+//            }
+//        } catch let error as NSError {
+//            print("Detele all data in \(entity) error : \(error) \(error.userInfo)")
+//        }
+//        appDelegate.saveContext()
+//        
+//    }
 
     // MARK: UISceneSession Lifecycle
 
@@ -54,7 +79,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: "MovieDatabase")
+        let container = NSPersistentContainer(name: "DatabaseMovie")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.

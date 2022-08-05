@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DatabaseMovie" representedClassName="DatabaseMovie" syncable="YES" codeGenerationType="class">
+        <attribute name="detailMv" optional="YES" attributeType="String"/>
+        <attribute name="idMv" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="specialidMv" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="titleMv" optional="YES" attributeType="String"/>
+        <attribute name="urlMv" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="NewMovieDatabase" representedClassName="NewMovieDatabase" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="movieDetail" optional="YES" attributeType="String"/>
+        <attribute name="movieID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="movieTitle" optional="YES" attributeType="String"/>
+        <attribute name="posterURL" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="DatabaseMovie" positionX="-27" positionY="18" width="128" height="104"/>
+        <element name="NewMovieDatabase" positionX="18" positionY="99" width="128" height="104"/>
+    </elements>
+</model>
