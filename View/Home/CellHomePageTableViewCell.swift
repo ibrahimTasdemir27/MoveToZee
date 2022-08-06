@@ -36,11 +36,11 @@ class CellHomePageTableViewCell: UITableViewCell {
         detailPosterHome.frame = CGRect(x: 131, y: 45, width: 215, height: 99)
         favoriteButtonDesign.tintColor = .darkGray
         
-        starButtonDesign.tintColor = .systemYellow
-        starButtonDesign.layer.borderWidth = 1.3
-        starButtonDesign.layer.borderColor = UIColor.darkGray.cgColor
-        starButtonDesign.layer.cornerRadius = 22
-        starButtonDesign.frame = CGRect(x: 344, y: 23, width: 40, height: 40)
+        starButtonDesign.tintColor = .darkGray
+        //starButtonDesign.layer.borderWidth = 1.3
+        //starButtonDesign.layer.borderColor = UIColor.black.cgColor
+        //starButtonDesign.layer.cornerRadius = 22
+        starButtonDesign.frame = CGRect(x: 349, y: 23, width: 40, height: 40)
     }
 
 

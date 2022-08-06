@@ -8,10 +8,8 @@
 import UIKit
 
 class MyFilmsCellCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var myFilmsImage: UIImageView!
-    @IBOutlet weak var myFilmsLabel: UILabel!
     
-    
-    
-    
+    @IBOutlet weak var libraryImages: UIImageView!
+    @IBOutlet weak var libraryLabel: UILabel!
+    @IBOutlet weak var visualEfect: UIVisualEffectView!
 }

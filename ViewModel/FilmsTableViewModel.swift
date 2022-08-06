@@ -32,4 +32,6 @@ struct FilmsViewModel {
     var posterPath : String {
         return (self.films.posterPath)!
     }
+    
+    
 }

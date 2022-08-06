@@ -18,21 +18,18 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet var tableView: UITableView!
     
     
-    
+    var titHomeArray = [String]()
     var sendIndex = 0
     
     private var filmsTableViewModel: FilmsTableViewModel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        FireStorageManager().getLibrary()
         
         tableView.delegate = self
         tableView.dataSource = self
         getTitleDetailImage()
         self.navigationItem.title = "Movies"
-        
- 
-        
-        
     }
     
     func getTitleDetailImage() {
@@ -45,7 +42,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func starButtonClicked(_ sender: UIButton) {
-      
+        
         let point = tableView.convert(CGPoint.zero, from:sender)
         if let indexPath = tableView.indexPathForRow(at: point){
             let movie = self.filmsTableViewModel.newList[indexPath.row]

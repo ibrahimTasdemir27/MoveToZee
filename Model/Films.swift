@@ -27,3 +27,25 @@ struct MovieResultModel: Codable {
         case id = "id"
     }
 }
+
+struct LibraryModel : Codable{
+    let results : [LibraryResultModel]
+    
+    enum CodingKeys: String , CodingKey {
+        case results
+    }
+}
+
+
+struct LibraryResultModel : Codable {
+    let title : String
+    let url : String
+    
+    enum CodingKeys : String, CodingKey{
+        case title = "title"
+        case url  = "imageUrl"
+        
+    }
+    
+    
+}

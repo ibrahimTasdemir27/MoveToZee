@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		086C6A21E8785593CBC50B01 /* Pods_MoveToZee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69CEA94EED30A115A66025DE /* Pods_MoveToZee.framework */; };
+		BF02B062289F292500A201DB /* Animation+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02B061289F292500A201DB /* Animation+Ext.swift */; };
 		BF6151E72892F24E00DA127F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6151E62892F24E00DA127F /* AppDelegate.swift */; };
 		BF6151E92892F24E00DA127F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6151E82892F24E00DA127F /* SceneDelegate.swift */; };
 		BF6151EB2892F24E00DA127F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6151EA2892F24E00DA127F /* ViewController.swift */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		69CEA94EED30A115A66025DE /* Pods_MoveToZee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoveToZee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89EB635652CCAB6D57042DBC /* Pods-MoveToZee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoveToZee.release.xcconfig"; path = "Target Support Files/Pods-MoveToZee/Pods-MoveToZee.release.xcconfig"; sourceTree = "<group>"; };
+		BF02B061289F292500A201DB /* Animation+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation+Ext.swift"; sourceTree = "<group>"; };
 		BF6151E32892F24E00DA127F /* MoveToZee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoveToZee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF6151E62892F24E00DA127F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF6151E82892F24E00DA127F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,9 +96,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BF02B05C289E97BF00A201DB /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BFD264D12893B4B50034EF39 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		BF02B060289F291800A201DB /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				BF02B061289F292500A201DB /* Animation+Ext.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		BF6151DA2892F24E00DA127F = {
 			isa = PBXGroup;
 			children = (
+				BF02B060289F291800A201DB /* Helper */,
 				BFA592AC289BE4F5003D2B34 /* FireStoreManager.swift */,
 				BFA5929C289BB464003D2B34 /* DatabaseMovie.xcdatamodeld */,
 				BFA5929628997876003D2B34 /* CoreDataManager.swift */,
@@ -122,7 +141,6 @@
 		BF6151E52892F24E00DA127F /* MoveToZee */ = {
 			isa = PBXGroup;
 			children = (
-				BF6151EF2892F24F00DA127F /* Assets.xcassets */,
 				BF6151F12892F24F00DA127F /* LaunchScreen.storyboard */,
 				BF6151F42892F24F00DA127F /* Info.plist */,
 				BFD264C3289301240034EF39 /* GoogleService-Info.plist */,
@@ -163,7 +181,6 @@
 				BF6151E62892F24E00DA127F /* AppDelegate.swift */,
 				BF6151E82892F24E00DA127F /* SceneDelegate.swift */,
 				BF6151EA2892F24E00DA127F /* ViewController.swift */,
-				BFD264D12893B4B50034EF39 /* ProfileViewController.swift */,
 				BFA5928A28980E3F003D2B34 /* DetailsViewController.swift */,
 			);
 			path = Other;
@@ -172,11 +189,13 @@
 		BFD264C52893B2F40034EF39 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BF02B05C289E97BF00A201DB /* Profile */,
 				BFA592A9289BC5E4003D2B34 /* Other */,
 				BFA592A8289BC5BA003D2B34 /* Home */,
 				BFA59298289AC642003D2B34 /* Favorite */,
 				BFA592A1289BC1D2003D2B34 /* MyFilms */,
 				BF6151EC2892F24E00DA127F /* Main.storyboard */,
+				BF6151EF2892F24F00DA127F /* Assets.xcassets */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -335,6 +354,7 @@
 				BFA5929728997876003D2B34 /* CoreDataManager.swift in Sources */,
 				BF6151EB2892F24E00DA127F /* ViewController.swift in Sources */,
 				BFD264D02893B4A80034EF39 /* HomePageViewController.swift in Sources */,
+				BF02B062289F292500A201DB /* Animation+Ext.swift in Sources */,
 				BFD264D42893BC1A0034EF39 /* CellHomePageTableViewCell.swift in Sources */,
 				BFA592A5289BC266003D2B34 /* MyFilmsCellCollectionViewCell.swift in Sources */,
 				BFA592AB289BC8C8003D2B34 /* MyFilmsViewController.swift in Sources */,

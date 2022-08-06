@@ -10,6 +10,7 @@ import UIKit
 import SwiftUI
 import FirebaseFirestore
 import FirebaseStorage
+import Kingfisher
 
 class FireStorageManager {
     
@@ -23,7 +24,7 @@ class FireStorageManager {
    
     
     
-    func getLibrary(){
+    func getLibrary() {
        //Verileri çekmek
         firestoreDatabase.collection("Library").addSnapshotListener { snapshot, error in
             if let error = error {
@@ -38,19 +39,19 @@ class FireStorageManager {
                 for document in snapshot.documents{
                     if let title = document.get("title") as? String{
                         self.titleArray.append(title)
+                        
                     
                     }
                     if let imageUrl = document.get("imageUrl") as? String {
                         self.imageArray.append(imageUrl)
+                    
                     }
                     if let index = document.get("index") as? Int{
                         self.indexArray.append(index)
                     }
                     if let documentID = document.documentID as? String{
                         self.documentIDArray.append(documentID)
-                        
                     }
-                    
                 }
             }
             
@@ -68,6 +69,7 @@ class FireStorageManager {
                     if index == document.get("index") as! Int{
                         deleting = document.documentID
                         self.firestoreDatabase.collection("Library").document(deleting!).delete()
+                        
                     }
                 }
             }
@@ -90,7 +92,6 @@ class FireStorageManager {
                 print(error.localizedDescription)
             }
             if let snapshot = snapshot {
-                print("var la var")
                 self.documentIDArray.removeAll(keepingCapacity: false)
                 self.indexArray.removeAll(keepingCapacity: false)
                 self.imageArray.removeAll(keepingCapacity: false)
