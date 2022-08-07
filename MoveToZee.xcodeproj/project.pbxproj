@@ -112,13 +112,21 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		BF02B063289FC4C500A201DB /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				BFA5929C289BB464003D2B34 /* DatabaseMovie.xcdatamodeld */,
+				BFA5929628997876003D2B34 /* CoreDataManager.swift */,
+				BFA592AC289BE4F5003D2B34 /* FireStoreManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		BF6151DA2892F24E00DA127F = {
 			isa = PBXGroup;
 			children = (
+				BF02B063289FC4C500A201DB /* Manager */,
 				BF02B060289F291800A201DB /* Helper */,
-				BFA592AC289BE4F5003D2B34 /* FireStoreManager.swift */,
-				BFA5929C289BB464003D2B34 /* DatabaseMovie.xcdatamodeld */,
-				BFA5929628997876003D2B34 /* CoreDataManager.swift */,
 				BFD264C82893B3470034EF39 /* Webservice */,
 				BFD264C72893B33D0034EF39 /* ViewModel */,
 				BFD264C62893B3270034EF39 /* Model */,

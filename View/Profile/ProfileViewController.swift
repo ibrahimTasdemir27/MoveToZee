@@ -6,6 +6,8 @@
 //
 import Foundation
 import UIKit
+import FirebaseAuth
+
 
 class ProfileViewController: UIViewController {
     var profileName = UILabel()
@@ -71,7 +73,15 @@ class ProfileViewController: UIViewController {
     }
     
     @objc func signOut(){
-       
+        let activeUser = Auth.auth().currentUser
+        do{
+            try? Auth.auth().signOut()
+            performSegue(withIdentifier: "toLogin", sender: nil)
+        }catch{
+            showAlert(title: "Failure", message: error.localizedDescription ?? "Try Again")
+        }
+        
+        
     }
     
     

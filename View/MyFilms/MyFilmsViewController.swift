@@ -31,11 +31,9 @@ class MyFilmsViewController: UIViewController  {
         collectionView.dataSource = self
         collectionView.delegate = self
     
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             self.collectionView.reloadData()
-            
-            print(self.titleArray)
-            print(self.imageArray)
+     
         }
         
     
@@ -48,14 +46,15 @@ class MyFilmsViewController: UIViewController  {
      
     
     override func viewWillAppear(_ animated: Bool) {
-        getLibrary()
         self.collectionView.reloadData()
+        getLibrary()
+        
     }
     
     
     func getLibrary() {
        //Verileri çekmek
-        firestoreDatabase.collection("Library").addSnapshotListener { snapshot, error in
+        firestoreDatabase.collection("Library").addSnapshotListener{ snapshot, error in
             if let error = error {
                 print(error.localizedDescription)
             }
