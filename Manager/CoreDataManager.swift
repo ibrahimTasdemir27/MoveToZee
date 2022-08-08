@@ -25,47 +25,29 @@ class CoreDataManager {
         
         do{
             let results = try context.fetch(fetchRequest)
-            
             for result in results as! [NSManagedObject]{
                 if let id = result.value(forKey: "movieID") as? Int{
                     movieidArray.append(id)
                 }
             }
-            
         }catch{
-            print("Hata")
+            print(error.localizedDescription)
         }
-            
-            
         switch movieidArray.contains(movie.id){
             case true:
-                //Favoriden kaldıracak
                 deleteFromFavorites(id: movie.id)
-                
             case false:
-                //Favoriye ekleyecek
             saveTodFavorites(movie: movie)
-                
-                
             default:break
-                
             }
-            
-            
-            
-            
-        
-        
-        
-        
         return true
     }
+    
     
     func saveTodFavorites(movie: MovieResultModel) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let movieDatabase = NSEntityDescription.insertNewObject(forEntityName: "NewMovieDatabase", into: context)
-        
         movieDatabase.setValue(movie.id, forKey: "movieID")
         movieDatabase.setValue(movie.originalTitle, forKey: "movieTitle")
         movieDatabase.setValue(movie.overview, forKey: "movieDetail")
@@ -77,16 +59,11 @@ class CoreDataManager {
             print("başarılı")
             
         }catch{
-            print("Hatalı")
+            print(error.localizedDescription)
         }
-        
-        
-        
-        
     }
         
-    
-     func deleteFromFavorites(id: Int) {
+    func deleteFromFavorites(id: Int) {
          let appDelegate = UIApplication.shared.delegate as! AppDelegate
          let context = appDelegate.persistentContainer.viewContext
          let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "NewMovieDatabase")
@@ -101,30 +78,17 @@ class CoreDataManager {
                      if movieidArray.contains(idMovie){
                          context.delete(result)
                         
-                         
                          do{
                             try context.save()
                          }catch{
-                             print("Hata")
+                             print(error.localizedDescription)
                          }
                      }
-                     
-                     
-                     
                  }
              }
-             
-             
-         }catch{
+        }
+        catch{
              print("Hataa")
          }
-         
-         
-        
-        
-        
     }
-    
 }
-
-
