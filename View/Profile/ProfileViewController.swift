@@ -42,10 +42,10 @@ class ProfileViewController: UIViewController {
         profileSurname.frame = CGRect(x: width * 0.3, y: height * 0.28, width: 263, height: 34)
         view.addSubview(profileSurname)
         
-        profileImage = UIImageView(image: UIImage(named: "profileimage"))
+        profileImage = UIImageView(image: UIImage(named: "AppIcon"))
         profileImage.frame = CGRect(x: width * 0.09, y: height * 0.225, width: 80, height: 80)
         profileImage.layer.borderWidth = 1
-        profileImage.layer.cornerRadius = 41.6
+        profileImage.layer.cornerRadius = 5
         profileImage.layer.borderColor = UIColor.black.cgColor
         view.addSubview(profileImage)
         

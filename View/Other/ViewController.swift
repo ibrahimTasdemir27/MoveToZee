@@ -8,15 +8,47 @@
 import Alamofire
 import FirebaseAuth
 import UIKit
+import SwiftUI
 
 class ViewController: UIViewController {
     @IBOutlet var loginPassword: UITextField!
     @IBOutlet var loginEmail: UITextField!
     @IBOutlet var loginImage: UIImageView!
+    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginImage.image = UIImage(named: "background")
+        loginImage.image = UIImage(named: "start")
         loginImage.contentMode = .scaleAspectFill
+
+        //Layout
+        let width = view.frame.size.width
+        let height = view.frame.size.height
+        
+        loginEmail.layer.cornerRadius = 8
+        loginEmail.frame = CGRect(x: width * 0.15, y: height * 0.45, width: 284, height: 34)
+        loginEmail.layer.borderWidth = 1
+        //loginEmail.layer.borderColor = CGColor.init(red: 112, green: 0, blue: 22, alpha: 255)
+        loginEmail.layer.borderColor = UIColor.black.cgColor
+        
+        loginPassword.layer.cornerRadius = 8
+        loginPassword.frame = CGRect(x: width * 0.15, y: height * 0.495, width: 284, height: 34)
+        loginPassword.layer.borderWidth = 1
+        loginPassword.layer.borderColor = UIColor.black.cgColor
+        
+        signInButton.frame = CGRect(x: 0 , y: height * 0.725, width: width, height: 62)
+        signInButton.layer.borderWidth = 1
+        signInButton.layer.borderColor = UIColor.black.cgColor
+        
+        
+        signUpButton.frame = CGRect(x: 0, y: height * 0.8, width: width, height: 62)
+        signUpButton.layer.borderWidth = 1
+        signUpButton.layer.borderColor = UIColor.black.cgColor
+        
+        
+        
     }
 
     @IBAction func loginLog(_ sender: Any) {

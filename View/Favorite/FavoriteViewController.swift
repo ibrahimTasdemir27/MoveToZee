@@ -16,7 +16,7 @@ class FavoriteViewController: UIViewController {
     var imageurlArray = [String]()
     var idArray = [UUID]()
     var movieidArray = [Int]()
-   
+    var movieID = 0
     
     @IBOutlet var tableView: UITableView!
     
@@ -27,6 +27,7 @@ class FavoriteViewController: UIViewController {
         tableView.dataSource = self
         tableView.reloadData()
         getFavorite()
+        navigationItem.title = "Favorites"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -132,7 +133,8 @@ extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        movieID = movieidArray[indexPath.row]
+        performSegue(withIdentifier: "toDetailsVCFavorite", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -141,6 +143,16 @@ extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Swipe left to remove from Favorites"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailsVCFavorite" {
+            let destinationVC = segue.destination as! DetailsViewController
+            destinationVC.segue = 3
+            destinationVC.getIndex = movieID
+            
+            
+        }
     }
 }
 

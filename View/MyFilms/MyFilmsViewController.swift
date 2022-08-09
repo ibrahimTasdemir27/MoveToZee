@@ -14,11 +14,13 @@ import UIKit
 class MyFilmsViewController: UIViewController {
     let firestoreDatabase = Firestore.firestore()
     var libraryDict : [LibraryResultModel] = []
+    var selectedIndex = 5
+    
     
     @IBOutlet var collectionView: UICollectionView!
-    private var collectionModel : LibraryCollectionViewModel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Library"
         
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -53,9 +55,7 @@ class MyFilmsViewController: UIViewController {
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return libraryDict.count
-    }
+   
 
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,6 +66,7 @@ class MyFilmsViewController: UIViewController {
 
 
 extension MyFilmsViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LibraryCell", for: indexPath) as! MyFilmsCellCollectionViewCell
         let processor = DownsamplingImageProcessor(size: self.collectionView.bounds.size)
@@ -75,4 +76,27 @@ extension MyFilmsViewController: UICollectionViewDataSource, UICollectionViewDel
         cell.libraryLabel.text = libraryDict[indexPath.row].title
         return cell
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return libraryDict.count
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedIndex = libraryDict[indexPath.row].index
+        performSegue(withIdentifier: "toDetailsVCLibrary", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailsVCLibrary" {
+            let destinationVC = segue.destination as! DetailsViewController
+            destinationVC.segue = 1
+            destinationVC.getIndex = selectedIndex
+            print("getIndex:" , selectedIndex )
+        }
+    }
+    
+    
+    
 }

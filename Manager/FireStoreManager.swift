@@ -105,4 +105,19 @@ class FireStorageManager {
             }
         }
     }
+    
+    
+    func saveMessage(comment : String , user : String){
+        let firestorePost = ["comment": comment , "user" : user] as [String : Any]
+        firestoreDatabase.collection("Messages").addDocument(data: firestorePost) { error in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+        
+        
+        
+        
+        
+    }
 }

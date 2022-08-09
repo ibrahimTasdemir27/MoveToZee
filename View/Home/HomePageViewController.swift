@@ -90,6 +90,7 @@ extension HomePageViewController: UITableViewDelegate, UITableViewDataSource {
         if segue.identifier == "toDetailsVC" {
             let destinationVC = segue.destination as! DetailsViewController
             destinationVC.getIndex = sendIndex
+            destinationVC.segue = 1
         }
     }
 
